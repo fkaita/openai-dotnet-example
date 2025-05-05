@@ -13,11 +13,11 @@ class Program
         switch (args[0].ToLower())
         {
             case "single":
-                await ResponsesExamples.FunctionCallingStreamingAsync();
+                await ResponsesExamples.SingleFunctionCallingStreamingAsync();
                 break;
-            // case "multi":
-            //     MathExample.Run();
-            //     break;
+            case "multi":
+                await ResponsesExamples.MultiFunctionCallingStreamingAsync();
+                break;
             default:
                 Console.WriteLine($"Unknown example: {args[0]}");
                 break;

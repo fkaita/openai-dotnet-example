@@ -8,7 +8,7 @@ namespace Examples;
 /// </summary>
 public partial class ResponsesExamples
 {
-    public static async Task FunctionCallingStreamingAsync()
+    public static async Task SingleFunctionCallingStreamingAsync()
     {
         OpenAIResponseClient client = new(
             model: "gpt-4o-mini",
@@ -76,7 +76,8 @@ public partial class ResponsesExamples
         if (!string.IsNullOrEmpty(functionCallId))
         {
             string functionResult = "";
-            if (functionName == "get_weather"){
+            if (functionName == "get_weather")
+            {
                 if (functionArguments != null && functionArguments.RootElement.TryGetProperty("location", out var location))
                 {
                     functionResult = await GetCurrentWeatherTool(location.GetString() ?? "unknown location");
@@ -111,7 +112,7 @@ public partial class ResponsesExamples
     // Custom function used by the model
     public static Task<string> GetCurrentWeatherTool(string location)
     {
-        // Implement actual API or simulated result here.
+        // Implement actual API call here
         return Task.FromResult($"The current weather in {location} is sunny!");
     }
 }
