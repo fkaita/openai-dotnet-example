@@ -43,6 +43,12 @@ Run with one of the supported arguments:
   dotnet run -- multi
   ```
 
+- **`file`** – Demonstrates how to upload a file and ask a question about its contents..
+
+  ```bash
+  dotnet run -- file
+  ```
+
 You will be prompted to enter a question like:
 
 ```bash
