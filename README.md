@@ -1,10 +1,12 @@
 # OpenAI .NET Response API Streaming with function calling Example
 
-This repository demonstrates how to use the [OpenAI .NET SDK](https://github.com/openai/openai-dotnet) with the new **Response API** to streaming replies and handle function calling in C#.
+This repository demonstrates how to use the [OpenAI .NET SDK](https://github.com/openai/openai-dotnet) with the new **Response API**.
 
 - [SingleFunctionCallingStreamingAsync.cs](examples/SingleFunctionCallingStreamingAsync.cs): Single Function Calling with Streaming Response
 
 - [MultiFunctionCallingStreamingAsync.cs](examples/MultiFunctionCallingStreamingAsync.cs): Multiple Function Calling with Streaming Response
+
+- [FileUploadExample.cs](examples/FileUploadExample.cs): File Upload example with Response
 
 ## 🛠 Prerequisites
 
@@ -46,7 +48,7 @@ Run with one of the supported arguments:
 - **`file`** – Demonstrates how to upload a file and ask a question about its contents..
 
   ```bash
-  dotnet run -- file
+  dotnet run -- file <file-path>
   ```
 
 You will be prompted to enter a question like:

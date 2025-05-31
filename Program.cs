@@ -19,7 +19,12 @@ class Program
                 await ResponsesExamples.MultiFunctionCallingStreamingAsync();
                 break;
             case "file":
-                await ResponsesExamples.FileUploadExample();
+                if (args.Length < 2)
+                {
+                    Console.WriteLine("Usage: dotnet run -- file <file-path>");
+                    return;
+                }
+                await ResponsesExamples.FileUploadExample(args[1]);
                 break;
             default:
                 Console.WriteLine($"Unknown example: {args[0]}");
