@@ -18,6 +18,9 @@ class Program
             case "multi":
                 await ResponsesExamples.MultiFunctionCallingStreamingAsync();
                 break;
+            case "file":
+                await ResponsesExamples.FileUploadExample();
+                break;
             default:
                 Console.WriteLine($"Unknown example: {args[0]}");
                 break;
